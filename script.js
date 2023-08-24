@@ -1,9 +1,11 @@
 window.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("form").addEventListener("submit", creaUrl);
   document.getElementById("loadImg").addEventListener("click", caricaImgs);
   document.getElementById("secondLoadImg").addEventListener("click", caricaImgs2);
 });
 const mainUrl = "https://api.pexels.com/v1/search?query=nature";
 const secondaryUrl = "https://api.pexels.com/v1/search?query=city";
+
 const caricaImgs = async () => {
   try {
     const risp = await fetch(mainUrl, {
@@ -35,6 +37,7 @@ const caricaImgs2 = async () => {
   }
 };
 const creaUrl = async () => {
+  console.log("prova");
   try {
     const customUrl = "https://api.pexels.com/v1/search?query=" + document.getElementById("ricerca").value;
     const risp = await fetch(customUrl, {
