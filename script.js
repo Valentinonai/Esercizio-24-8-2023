@@ -87,6 +87,7 @@ const generaCard = (photos) => {
     btnGroup.className = "btn-group";
     const btn1 = document.createElement("button");
     btn1.innerText = "View";
+
     btn1.className = "btn btn-sm btn-outline-secondary";
     btn1.setAttribute("data-bs-toggle", "modal");
     btn1.setAttribute("data-bs-target", "#modalBody");
